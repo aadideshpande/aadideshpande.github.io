@@ -1,0 +1,139 @@
+#main_heading{
+	background-color: #FFD700; 	/* gold color for th main heading */
+	padding: 0;
+	margin:auto;
+	overflow: hidden; 
+	font-family: monospace;
+
+}
+
+
+
+#navbar ul{
+	font-size: large;
+	list-style: 0;
+	background-color: #F0E68C;
+	font-family: monospace;
+	padding: 0;
+	margin: auto;
+	
+}
+
+#navbar li{
+
+	display: inline;
+}
+
+.container{
+	background-color: #FAFAD2;
+
+}
+
+.image_1{
+
+	margin-top:80px;
+	margin-left: 80px;
+	margin-right: 50px;
+	/*background-color: #F0E68C;*/
+	border-color: #F0E68C;
+	border-width: 30px;
+	border: 2px solid ;
+}
+
+.intro{
+	margin-top: 100px;
+	padding-top: 5px;
+	font-family: monospace;
+	font-size: 40px;
+	background-color:#FFD700; 
+	padding-bottom: 5px;
+}
+
+
+
+
+#heading-about{
+	font-family: monospace;
+	font-size: 40px;
+}
+/*
+#heading1{
+	font-family: monospace;
+	font-size: 30px;
+	padding: 0;
+
+}
+
+#heading2{
+	font-family: monospace;
+	font-size: 30px;
+	padding: 0;
+}
+
+}
+*/
+.data{
+	padding-top: 50px;
+	font-family: monospace;
+	font-size: 25px;
+	background-color:  #F0E68C;
+	padding-bottom: 10px;
+}
+
+#facebook-image{
+	padding: 200px;
+	padding-right: 0px;
+	padding-left: 400px;
+	padding-top: 5px;
+}
+
+#linkedin-image{
+	padding: 200px;
+	padding-top: 5px;
+}
+
+#quora-image{
+	padding: 200px;
+	padding-left: 0px;
+	padding-top: 5px;
+}
+
+.large-img{
+	padding: 50px;
+	padding-left: 500px;
+}
+
+#forward {
+
+}
+
+#heading-about{
+	font-size: 30px;
+	padding-left: 5px;
+}
+
+#projects{
+	font-size: 30px;
+	font-family: monospace;
+}
+
+.projects{
+	
+	background-color: yellow;
+	font-size: 25px;
+	font-family: monospace;
+	padding-bottom: 10px;
+}
+
+.contactme{
+	background-color:  #F0E68C;
+	font-family: monospace;
+	font-size: 30px;
+
+
+
+}
+
+#contactme-heading{
+	font-size: 30px;
+}
