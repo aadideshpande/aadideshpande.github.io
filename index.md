@@ -2,8 +2,6 @@
 layout: null
 title: "Home"
 ---
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -49,9 +47,9 @@ title: "Home"
     .profile-photo {
       display: block;
       margin-bottom: 1rem;
-      width: 120px;
+      width: 200px;
       height: auto;
-      border-radius: 50%; /* Circular photo */
+      border-radius: 0; /* Rectangular photo */
     }
     .name {
       font-size: 2rem;
