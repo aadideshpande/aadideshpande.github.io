@@ -9,139 +9,189 @@ title: "Home"
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
-  <meta name="description" content="Showcasing my work">
-  
-  <!-- Inline CSS -->
+  <!-- Inline CSS for a minimal 2-column design -->
   <style>
-    /* General Reset/Basic Styles */
+    /* Base reset and simple typography */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       color: #333;
-      line-height: 1.6;
+      line-height: 1.5;
+      background-color: #fff;
+      margin: 2rem;
     }
-
-    /* Header and Nav */
-    header {
-      background: #0077b6;
-      color: #fff;
-      padding: 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-    nav ul {
-      list-style: none;
-      margin: 10px 0 0 0;
-      padding: 0;
-      display: flex;
-      gap: 15px;
-    }
-    nav ul li {
-      display: inline-block;
-    }
-    nav a {
-      color: #fff;
+    a {
+      color: #0073e6;
       text-decoration: none;
-      font-weight: bold;
     }
-    nav a:hover {
+    a:hover {
       text-decoration: underline;
     }
 
-    /* Main Content */
-    main {
+    /* Container to center the two-column layout */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
       display: flex;
-      flex-wrap: wrap; /* so content wraps on smaller screens */
-      padding: 20px;
-      align-items: center;
+      flex-wrap: wrap; /* so columns can stack on mobile */
     }
 
-    .profile-photo {
-      width: 180px;       /* Adjust as desired */
-      height: auto;
-      border-radius: 10px;
-      margin-right: 30px; /* Space between photo and text */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* LEFT COLUMN */
+    .left-column {
+      flex: 1 1 300px;  /* Grow/shrink, min width 300px */
+      max-width: 350px; /* Control how wide the left side can get */
+      margin-right: 3rem;
+    }
+    .name {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .location {
+      margin-bottom: 1rem;
+      color: #666;
+    }
+    .links {
+      margin-top: 1rem;
+    }
+    .links a {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
     }
 
-    .text-section {
-      flex: 1;
-      min-width: 300px;   /* Ensures text doesn't get too narrow */
+    /* RIGHT COLUMN */
+    .right-column {
+      flex: 2 1 400px; /* Grows more than left column, min width 400px */
+    }
+    .section {
+      margin-bottom: 2rem; /* Space between sections */
+    }
+    .section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .section ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+    }
+    .section p, .section li {
+      margin-bottom: 0.75rem;
     }
 
-    /* Footer */
-    footer {
-      text-align: center;
-      background: #023e8a;
-      color: #fff;
-      padding: 10px 20px;
+    /* RESPONSIVE: stack columns on narrow screens */
+    @media (max-width: 800px) {
+      .container {
+        flex-direction: column;
+      }
+      .left-column {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
+      .right-column {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header with Basic Nav -->
-  <header>
-    <h1>My Portfolio</h1>
-    <nav>
+<div class="container">
+  <!-- LEFT COLUMN -->
+  <div class="left-column">
+    <div class="name">Aadi Deshpande</div>
+    <div class="location">Chicago, IL</div>
+    
+    <p>
+      I'm currently pursuing a Master of Science in Financial Mathematics at
+      The University of Chicago (expected Dec 2025). I'm actively seeking
+      Summer 2025 internships in quantitative finance, data science,
+      and algorithmic trading.
+    </p>
+
+    <div class="links">
+      <a href="mailto:aadi@uchicago.edu">aadi@uchicago.edu</a>
+      <a href="https://www.linkedin.com/in/aadi-deshpande-b13045166/">LinkedIn Profile</a>
+      <!-- Add GitHub link if desired:
+      <a href="https://github.com/username">GitHub</a>
+      -->
+    </div>
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div class="right-column">
+
+    <!-- Education Section -->
+    <div class="section">
+      <h2>Education</h2>
       <ul>
-        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-        <li><a href="{{ '/about' | relative_url }}">About</a></li>
-        <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Main Content: Photo on Left, Text on Right -->
-  <main>
-    <img src="/assets/images/profile.jpg" alt="Profile Photo" class="profile-photo">
-
-    <div class="text-section">
-      <h2>Hello, I'm Aadi Deshpande</h2>
-      <p>
-        I’m currently pursuing a <strong>Master of Science in Financial Mathematics</strong> at
-        the University of Chicago (expected December 2025), with a B.Tech. in Computer Science from
-        Manipal Institute of Technology.
-      </p>
-      <p>
-        I’ve held roles at Goldman Sachs and the University of Chicago Project Lab, focusing on
-        quantitative research, distributed microservices, and data analytics. I’m <strong>actively 
-        seeking Summer 2025 internship</strong> opportunities in quantitative finance, data science, 
-        and related fields.
-      </p>
-
-      <h3>Skills & Interests</h3>
-      <ul>
-        <li>Python, C++, Java, SQL</li>
-        <li>Portfolio Optimization, Risk Management</li>
-        <li>Machine Learning (TensorFlow, Keras)</li>
-      </ul>
-
-      <h3>Contact</h3>
-      <ul>
-        <li>Email: <a href="mailto:aadi@uchicago.edu">aadi@uchicago.edu</a></li>
-        <li>LinkedIn: 
-          <a href="https://www.linkedin.com/in/aadi-deshpande-b13045166/" target="_blank">
-            linkedin.com/in/aadi-deshpande-b13045166/
-          </a>
+        <li>
+          <strong>M.S. Financial Mathematics</strong>, The University of Chicago  
+          <em>Expected Dec 2025</em>
         </li>
-        <li>Location: Chicago, IL</li>
+        <li>
+          <strong>B.Tech. in Computer Science</strong>, Manipal Institute of Technology  
+          <em>July 2018 - July 2022</em>
+        </li>
       </ul>
     </div>
-  </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; {{ site.time | date: "%Y" }} My Portfolio. All rights reserved.</p>
-  </footer>
+    <!-- Experience Section -->
+    <div class="section">
+      <h2>Experience</h2>
+      <ul>
+        <li>
+          <strong>Quantitative Researcher</strong> - University of Chicago Project Lab  
+          <em>Jan 2025 - Present</em>  
+          Developed latent factor models using PCA to enhance factor investing strategies in corporate bonds.
+        </li>
+        <li>
+          <strong>Engineering Analyst</strong> - Goldman Sachs  
+          <em>Aug 2022 - July 2024</em>  
+          Built distributed microservices with Apache Kafka, improved SQL issue resolution times, and implemented NLP techniques to streamline invoice processing.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Languages: Python, C++, Java, SQL</li>
+        <li>Frameworks: Docker, FastAPI, Spring Boot, Django REST</li>
+        <li>Quant Methods: Portfolio Optimization, Risk Management, Factor Investing</li>
+      </ul>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>Portfolio Optimization</strong>  
+          Implemented a Mean-Variance model incorporating inflation-indexed bonds (TIPS) for better risk mitigation.
+        </li>
+        <li>
+          <strong>Predictive Modeling for Loan Repayment</strong>  
+          Achieved 89% accuracy using neural networks (Keras/TensorFlow) on a dataset of 400k+ loan records.
+        </li>
+        <li>
+          <strong>Scalable Data Platform</strong>  
+          Developed a Python FastAPI backend with a Data Lake, advanced metadata catalog, and Docker-based deployment.
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
 
 </body>
 </html>
