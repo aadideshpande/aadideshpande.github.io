@@ -1,39 +1,147 @@
 ---
-layout: default
+layout: null
 title: "Home"
 ---
 
-# Hello, I'm Aadi Deshpande
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="Showcasing my work">
+  
+  <!-- Inline CSS -->
+  <style>
+    /* General Reset/Basic Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<!-- Profile Photo Example -->
-![My Profile Photo](/assets/images/profile.jpg)
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
 
-Welcome to my personal portfolio site, built with Jekyll on GitHub Pages.
+    /* Header and Nav */
+    header {
+      background: #0077b6;
+      color: #fff;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    nav ul {
+      list-style: none;
+      margin: 10px 0 0 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+    nav ul li {
+      display: inline-block;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-## About Me
+    /* Main Content */
+    main {
+      display: flex;
+      flex-wrap: wrap; /* so content wraps on smaller screens */
+      padding: 20px;
+      align-items: center;
+    }
 
-I’m currently pursuing a **Master of Science in Financial Mathematics** at the University of Chicago (expected December 2025), with a prior **B.Tech. in Computer Science** from Manipal Institute of Technology. I’ve held roles at **Goldman Sachs** and the **University of Chicago**, where I focused on:
-- Quantitative research using Python and advanced ML libraries  
-- Distributed microservices with Java (Spring Boot) and SQL solutions  
-- Building and deploying applications on cloud platforms using Docker
+    .profile-photo {
+      width: 180px;       /* Adjust as desired */
+      height: auto;
+      border-radius: 10px;
+      margin-right: 30px; /* Space between photo and text */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
 
-I’m **actively seeking Summer 2025 internship** opportunities where I can apply my background in financial mathematics, quantitative analysis, and software development to solve real-world business challenges.
+    .text-section {
+      flex: 1;
+      min-width: 300px;   /* Ensures text doesn't get too narrow */
+    }
 
-**Key Skills**  
-- **Programming**: Python, C/C++, Java, SQL  
-- **Frameworks/Tools**: Docker, FastAPI, Spring Boot
-- **Libraries**: NumPy, Pandas, Seaborn, TensorFlow, Keras  
-- **Finance/Quant**: Portfolio Optimization, Risk Management, Machine Learning
+    /* Footer */
+    footer {
+      text-align: center;
+      background: #023e8a;
+      color: #fff;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
 
-## Projects
+  <!-- Header with Basic Nav -->
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/about' | relative_url }}">About</a></li>
+        <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
 
-I’ve worked on various projects involving portfolio optimization, systematic credit investing, distributed systems, and data analytics. To learn more, visit my [Projects page](projects.md) (coming soon), or explore my GitHub repositories directly.
+  <!-- Main Content: Photo on Left, Text on Right -->
+  <main>
+    <img src="/assets/images/profile.jpg" alt="Profile Photo" class="profile-photo">
 
-## Contact
+    <div class="text-section">
+      <h2>Hello, I'm Aadi Deshpande</h2>
+      <p>
+        I’m currently pursuing a <strong>Master of Science in Financial Mathematics</strong> at
+        the University of Chicago (expected December 2025), with a B.Tech. in Computer Science from
+        Manipal Institute of Technology.
+      </p>
+      <p>
+        I’ve held roles at Goldman Sachs and the University of Chicago Project Lab, focusing on
+        quantitative research, distributed microservices, and data analytics. I’m <strong>actively 
+        seeking Summer 2025 internship</strong> opportunities in quantitative finance, data science, 
+        and related fields.
+      </p>
 
-- Email: [aadi@uchicago.edu](mailto:aadi@uchicago.edu)
-- LinkedIn: [linkedin.com/in/aadi-deshpande-b13045166/](https://www.linkedin.com/in/aadi-deshpande-b13045166/)
-- Location: Chicago, IL
+      <h3>Skills & Interests</h3>
+      <ul>
+        <li>Python, C++, Java, SQL</li>
+        <li>Portfolio Optimization, Risk Management</li>
+        <li>Machine Learning (TensorFlow, Keras)</li>
+      </ul>
 
-<!-- Footer or Final Note -->
-Thank you for visiting! I look forward to connecting and exploring new opportunities in the world of quantitative finance.
+      <h3>Contact</h3>
+      <ul>
+        <li>Email: <a href="mailto:aadi@uchicago.edu">aadi@uchicago.edu</a></li>
+        <li>LinkedIn: 
+          <a href="https://www.linkedin.com/in/aadi-deshpande-b13045166/" target="_blank">
+            linkedin.com/in/aadi-deshpande-b13045166/
+          </a>
+        </li>
+        <li>Location: Chicago, IL</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; {{ site.time | date: "%Y" }} My Portfolio. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
