@@ -9,7 +9,7 @@ title: "Home"
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
-  <!-- Inline CSS for a minimal 2-column design -->
+  <!-- Inline CSS to mimic jeremybejarano.com with a photo in the left column -->
   <style>
     /* Base reset and simple typography */
     * {
@@ -32,19 +32,26 @@ title: "Home"
       text-decoration: underline;
     }
 
-    /* Container to center the two-column layout */
+    /* Container for the two-column layout */
     .container {
       max-width: 1100px;
       margin: 0 auto;
       display: flex;
-      flex-wrap: wrap; /* so columns can stack on mobile */
+      flex-wrap: wrap; /* Stacks columns on mobile */
     }
 
     /* LEFT COLUMN */
     .left-column {
-      flex: 1 1 300px;  /* Grow/shrink, min width 300px */
-      max-width: 350px; /* Control how wide the left side can get */
+      flex: 1 1 300px;
+      max-width: 350px;
       margin-right: 3rem;
+    }
+    .profile-photo {
+      display: block;
+      margin-bottom: 1rem;
+      width: 120px;
+      height: auto;
+      border-radius: 50%; /* Circular photo */
     }
     .name {
       font-size: 2rem;
@@ -66,10 +73,10 @@ title: "Home"
 
     /* RIGHT COLUMN */
     .right-column {
-      flex: 2 1 400px; /* Grows more than left column, min width 400px */
+      flex: 2 1 400px;
     }
     .section {
-      margin-bottom: 2rem; /* Space between sections */
+      margin-bottom: 2rem;
     }
     .section h2 {
       margin-bottom: 1rem;
@@ -107,20 +114,23 @@ title: "Home"
 <div class="container">
   <!-- LEFT COLUMN -->
   <div class="left-column">
+    <!-- Profile Photo -->
+    <img src="/assets/images/profile.jpg" alt="Profile Photo" class="profile-photo" />
+
     <div class="name">Aadi Deshpande</div>
     <div class="location">Chicago, IL</div>
-    
+
     <p>
       I'm currently pursuing a Master of Science in Financial Mathematics at
       The University of Chicago (expected Dec 2025). I'm actively seeking
-      Summer 2025 internships in quantitative finance, data science,
+      Summer 2025 internships in quantitative finance, data science, 
       and algorithmic trading.
     </p>
 
     <div class="links">
       <a href="mailto:aadi@uchicago.edu">aadi@uchicago.edu</a>
       <a href="https://www.linkedin.com/in/aadi-deshpande-b13045166/">LinkedIn Profile</a>
-      <!-- Add GitHub link if desired:
+      <!-- Optional GitHub link:
       <a href="https://github.com/username">GitHub</a>
       -->
     </div>
@@ -134,12 +144,12 @@ title: "Home"
       <h2>Education</h2>
       <ul>
         <li>
-          <strong>M.S. Financial Mathematics</strong>, The University of Chicago  
+          <strong>M.S. Financial Mathematics</strong>, The University of Chicago<br/>
           <em>Expected Dec 2025</em>
         </li>
         <li>
-          <strong>B.Tech. in Computer Science</strong>, Manipal Institute of Technology  
-          <em>July 2018 - July 2022</em>
+          <strong>B.Tech. in Computer Science</strong>, Manipal Institute of Technology<br/>
+          <em>July 2018 – July 2022</em>
         </li>
       </ul>
     </div>
@@ -149,14 +159,15 @@ title: "Home"
       <h2>Experience</h2>
       <ul>
         <li>
-          <strong>Quantitative Researcher</strong> - University of Chicago Project Lab  
-          <em>Jan 2025 - Present</em>  
+          <strong>Quantitative Researcher</strong> - Univ. of Chicago Project Lab<br/>
+          <em>Jan 2025 – Present</em><br/>
           Developed latent factor models using PCA to enhance factor investing strategies in corporate bonds.
         </li>
         <li>
-          <strong>Engineering Analyst</strong> - Goldman Sachs  
-          <em>Aug 2022 - July 2024</em>  
-          Built distributed microservices with Apache Kafka, improved SQL issue resolution times, and implemented NLP techniques to streamline invoice processing.
+          <strong>Engineering Analyst</strong> - Goldman Sachs<br/>
+          <em>Aug 2022 – July 2024</em><br/>
+          Built distributed microservices with Apache Kafka, improved SQL issue resolution times, 
+          and developed NLP solutions for invoice processing.
         </li>
       </ul>
     </div>
@@ -167,7 +178,7 @@ title: "Home"
       <ul>
         <li>Languages: Python, C++, Java, SQL</li>
         <li>Frameworks: Docker, FastAPI, Spring Boot, Django REST</li>
-        <li>Quant Methods: Portfolio Optimization, Risk Management, Factor Investing</li>
+        <li>Quant Methods: Portfolio Optimization, Risk Management, Machine Learning</li>
       </ul>
     </div>
 
@@ -176,16 +187,16 @@ title: "Home"
       <h2>Projects</h2>
       <ul>
         <li>
-          <strong>Portfolio Optimization</strong>  
-          Implemented a Mean-Variance model incorporating inflation-indexed bonds (TIPS) for better risk mitigation.
+          <strong>Portfolio Optimization</strong><br/>
+          Mean-Variance model incorporating TIPS to mitigate inflation risk.
         </li>
         <li>
-          <strong>Predictive Modeling for Loan Repayment</strong>  
-          Achieved 89% accuracy using neural networks (Keras/TensorFlow) on a dataset of 400k+ loan records.
+          <strong>Predictive Modeling for Loan Repayment</strong><br/>
+          Achieved 89% accuracy on 400k+ loan records using Keras/TensorFlow.
         </li>
         <li>
-          <strong>Scalable Data Platform</strong>  
-          Developed a Python FastAPI backend with a Data Lake, advanced metadata catalog, and Docker-based deployment.
+          <strong>Scalable Data Platform</strong><br/>
+          Python FastAPI backend, Docker-based deployment, and a robust Data Lake architecture.
         </li>
       </ul>
     </div>
