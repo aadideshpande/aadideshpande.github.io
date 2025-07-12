@@ -121,7 +121,7 @@ title: "Home"
     <p>
       I'm currently pursuing a Master of Science in Financial Mathematics at
       The University of Chicago (expected Dec 2025). I'm actively seeking
-      Summer 2025 internships in quantitative finance, data science, 
+      full time roles in quantitative finance, data science, 
       and algorithmic trading.
     </p>
 
@@ -156,6 +156,11 @@ title: "Home"
     <div class="section">
       <h2>Experience</h2>
       <ul>
+        <li>
+          <strong>Quantitative Risk Intern</strong> - Mortgage Guaranty Insurance Corporation<br/>
+          <em>June 2025 – Present</em><br/>
+          Developed a machine learning-based analytical framework using tree-based algorithms (e.g., decision trees, XGBoost) to detect               statistically significant differences between time-separated mortgage portfolios, enabling deeper understanding of loan          origination trends and default risk evolution.
+        </li>
         <li>
           <strong>Quantitative Researcher</strong> - Univ. of Chicago Project Lab<br/>
           <em>Jan 2025 – Present</em><br/>
